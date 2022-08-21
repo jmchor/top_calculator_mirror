@@ -1,0 +1,39 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.outerBorder {
+	border: 2px solid black;
+	height: 70vh;
+	width: 25vw;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.display {
+	border: 2px solid black;
+	width: auto;
+	height: 10vh;
+	margin: 2rem 2rem 0 2rem;
+}
+
+.numpad {
+	border: 2px solid black;
+	width: auto;
+	height: 60vh;
+	margin: 0 2rem 2rem 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.row {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+button {
+}
