@@ -2,11 +2,12 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	height: 100vh;
 }
 
 .outerBorder {
 	border: 2px solid black;
-	height: 70vh;
+	height: 75vh;
 	width: 25vw;
 	display: flex;
 	flex-direction: column;
@@ -16,7 +17,7 @@ body {
 .display {
 	border: 2px solid black;
 	width: auto;
-	height: 10vh;
+	height: 15vh;
 	margin: 2rem 2rem 0 2rem;
 }
 
@@ -27,13 +28,24 @@ body {
 	margin: 0 2rem 2rem 2rem;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-between;
+	padding: 2rem;
 }
 
 .row {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
+	gap: 2rem;
+	margin: 0;
 }
 
 button {
+	width: 7rem;
+	height: 5rem;
+	text-align: center;
+	font-size: 22px;
+}
+
+button.double {
+	flex: 1;
 }
