@@ -12,6 +12,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+	background-color: rgb(46, 46, 46);
+	border-radius: 2remadd;
 }
 
 .display {
@@ -25,10 +27,12 @@ body {
 	align-items: flex-end;
 	font-size: 3rem;
 	font-weight: 700;
+	background-color: antiquewhite;
 }
 
 .numpad {
 	border: 2px solid black;
+	background-color: antiquewhite;
 	width: auto;
 	height: 60vh;
 	margin: 0 2rem 2rem 2rem;
@@ -54,4 +58,13 @@ button {
 
 button.double {
 	flex: 1;
+}
+
+button[data-number] {
+	background-color: rgb(150, 150, 150);
+}
+
+button[data-operator],
+button[data-other] {
+	background-color: rgb(240, 116, 0);
 }
