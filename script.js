@@ -16,7 +16,7 @@ function addDisplayNumber(number) {
 }
 function addDisplayOperator(sign) {
 	display.textContent += sign;
-	signArray.push(sign);
+	signArray.push(sign); // adds operator to an array that is evaluated in operate()
 }
 
 function clearDisplay() {
@@ -60,6 +60,7 @@ function operate() {
 	let b = justNumbers[1];
 
 	if (signArray.includes('-')) {
+		// identifies operator to perform specific function, enables negative numbers
 		display.textContent = roundResult(subtract(a, b));
 	} else if (signArray.includes('+')) {
 		display.textContent = roundResult(add(a, b));
