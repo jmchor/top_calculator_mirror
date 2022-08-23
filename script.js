@@ -29,7 +29,23 @@ function deleteDigit() {
 	operatingArray.pop();
 }
 function keyboardInput(e) {
-	if (e.key >= 0 && e.key <= 9) addDisplayNumber(e.key);
+	if (e.key >= 0 && e.key <= 9) {
+		addDisplayNumber(e.key);
+		operatingArray.push(e.key); //necessary to read the key input from array
+	}
+	if (e.key === '.') {
+		addDisplayOperator(e.key);
+		operatingArray.push(e.key);
+	}
+	if (e.key === 'Escape') clearDisplay(e.key);
+
+	if (e.key === 'Backspace') deleteDigit(e.key);
+
+	if (e.key === 'x' || e.key === '-' || e.key === '+' || e.key === ':') {
+		addDisplayOperator(e.key);
+		operatingArray.push(delimiter);
+	}
+	if (e.key === '=' || e.key === 'Enter') operate();
 }
 function roundResult(number) {
 	return Math.round(number * 1000) / 1000;
@@ -41,13 +57,13 @@ function operate() {
 	let a = justNumbers[0];
 	let b = justNumbers[1];
 
-	if (display.textContent.includes(' - ')) {
+	if (display.textContent.includes('-')) {
 		display.textContent = roundResult(subtract(a, b));
-	} else if (display.textContent.includes(' + ')) {
+	} else if (display.textContent.includes('+')) {
 		display.textContent = roundResult(add(a, b));
-	} else if (display.textContent.includes(' x ')) {
+	} else if (display.textContent.includes('x')) {
 		display.textContent = roundResult(multiply(a, b));
-	} else if (display.textContent.includes(' / ')) {
+	} else if (display.textContent.includes(':')) {
 		display.textContent = roundResult(divide(a, b));
 	}
 	operatingArray.length = 0;
