@@ -9,12 +9,14 @@ const equalsBtn = document.getElementById('equals');
 const delimiter = '_';
 const operatingArray = [];
 let joinedArray;
+let signArray = [];
 
 function addDisplayNumber(number) {
 	display.textContent += number;
 }
 function addDisplayOperator(sign) {
 	display.textContent += sign;
+	signArray.push(sign);
 }
 
 function clearDisplay() {
@@ -57,16 +59,17 @@ function operate() {
 	let a = justNumbers[0];
 	let b = justNumbers[1];
 
-	if (display.textContent.includes('-')) {
+	if (signArray.includes('-')) {
 		display.textContent = roundResult(subtract(a, b));
-	} else if (display.textContent.includes('+')) {
+	} else if (signArray.includes('+')) {
 		display.textContent = roundResult(add(a, b));
-	} else if (display.textContent.includes('x')) {
+	} else if (signArray.includes('x')) {
 		display.textContent = roundResult(multiply(a, b));
-	} else if (display.textContent.includes(':')) {
+	} else if (signArray.includes(':')) {
 		display.textContent = roundResult(divide(a, b));
 	}
 	operatingArray.length = 0;
+	signArray.length = 0;
 	operatingArray.push(display.textContent);
 }
 
