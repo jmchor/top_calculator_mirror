@@ -56,6 +56,7 @@ button {
 	font-weight: 900;
 	outline: none;
 	border: none;
+	cursor: pointer;
 }
 
 button.double {
@@ -67,10 +68,20 @@ button[data-number] {
 	box-shadow: 8px 8px 0 rgb(255, 163, 77);
 }
 
+button[data-number]:active {
+	transform: scale(0.98);
+	box-shadow: 3px 2px 22px 1px rgb(255, 163, 77);
+}
+
 button[data-operator],
 button[data-other] {
 	background-color: rgb(240, 116, 0);
 	box-shadow: 8px 8px 0 rgb(199, 199, 199);
+}
+
+button[data-operator]:active,
+button[data-other]:active {
+	box-shadow: 3px 2px 22px 1px rgb(199, 199, 199);
 }
 
 @media (max-width: 1500px) {
