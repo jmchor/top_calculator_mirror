@@ -9,14 +9,6 @@ body {
 	background-color: antiquewhite;
 }
 
-.outerBorder {
-	height: 75vh;
-	width: 25vw;
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
-
 .display {
 	width: 50%;
 	height: 15vh;
@@ -32,9 +24,8 @@ body {
 }
 
 .numpad {
-	width: auto;
+	width: 25vw;
 	height: 60vh;
-	margin: 0 2rem 2rem 2rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -69,8 +60,8 @@ button[data-number] {
 }
 
 button[data-number]:active {
-	transform: scale(0.98);
-	box-shadow: 3px 2px 22px 1px rgb(255, 163, 77);
+	transform: scale(0.93);
+	box-shadow: 6px 6px 0 rgb(255, 163, 77);
 }
 
 button[data-operator],
@@ -81,7 +72,8 @@ button[data-other] {
 
 button[data-operator]:active,
 button[data-other]:active {
-	box-shadow: 3px 2px 22px 1px rgb(199, 199, 199);
+	transform: scale(0.93);
+	box-shadow: 6px 6px 0 rgb(199, 199, 199);
 }
 
 @media (max-width: 1500px) {
@@ -105,12 +97,6 @@ button[data-other]:active {
 	}
 }
 @media (max-width: 768px) {
-	.outerBorder {
-		height: 75vh;
-		width: 35vw;
-		gap: 1rem;
-	}
-
 	.numpad {
 		width: auto;
 		height: 50vh;
@@ -130,29 +116,31 @@ button[data-other]:active {
 		font-size: 14px;
 	}
 }
-@media (max-width: 375px) {
-	.outerBorder {
-		height: 70vh;
-		width: 70vw;
-		gap: 1rem;
-	}
-
+@media (max-width: 395px) {
 	.numpad {
-		width: auto;
+		width: 80vw;
 		height: 50vh;
 		margin: 0 1rem 1rem 1rem;
 		padding: 1rem;
+		justify-content: center;
 	}
 	.row {
 		display: flex;
-		justify-content: space-between;
-		gap: 0.5rem;
+		justify-content: center;
+		gap: 0;
 		margin: 0;
 	}
 	button {
-		width: 3rem;
+		width: fit-content;
 		height: 2.5rem;
 		text-align: center;
 		font-size: 14px;
+		box-shadow: none;
+		flex: 1;
+	}
+	button[data-operator],
+	button[data-other],
+	button[data-number] {
+		box-shadow: none;
 	}
 }
