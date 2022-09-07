@@ -72,3 +72,97 @@ button[data-other] {
 	background-color: rgb(240, 116, 0);
 	box-shadow: 8px 8px 0 rgb(199, 199, 199);
 }
+
+@media (max-width: 1500px) {
+	.display {
+		width: auto;
+		height: 10vh;
+		margin: 1rem 1rem 0 1rem;
+		padding: 1rem 1rem 1rem 1rem;
+		font-size: 2rem;
+	}
+	.numpad {
+		width: auto;
+		height: 50vh;
+		margin: 0 1rem 1rem 1rem;
+		padding: 1rem;
+	}
+	.row {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		margin: 0;
+	}
+	button {
+		width: 5rem;
+		height: 3rem;
+		text-align: center;
+		font-size: 22px;
+	}
+}
+@media (max-width: 768px) {
+	.outerBorder {
+		border: 2px solid black;
+		height: 75vh;
+		width: 35vw;
+		gap: 1rem;
+	}
+	.display {
+		width: auto;
+		height: 10vh;
+		margin: 1rem 1rem 0 1rem;
+		padding: 1rem 1rem 1rem 1rem;
+		font-size: 2rem;
+	}
+	.numpad {
+		width: auto;
+		height: 50vh;
+		margin: 0 1rem 1rem 1rem;
+		padding: 1rem;
+	}
+	.row {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.5rem;
+		margin: 0;
+	}
+	button {
+		width: 3rem;
+		height: 2.5rem;
+		text-align: center;
+		font-size: 14px;
+	}
+}
+@media (max-width: 375px) {
+	.outerBorder {
+		border: 2px solid black;
+		height: 70vh;
+		width: 70vw;
+		gap: 1rem;
+	}
+	.display {
+		width: auto;
+		height: 10vh;
+		margin: 1rem 1rem 0 1rem;
+		padding: 1rem 1rem 1rem 1rem;
+		font-size: 2rem;
+	}
+	.numpad {
+		width: auto;
+		height: 50vh;
+		margin: 0 1rem 1rem 1rem;
+		padding: 1rem;
+	}
+	.row {
+		display: flex;
+		justify-content: space-between;
+		gap: 0.5rem;
+		margin: 0;
+	}
+	button {
+		width: 3rem;
+		height: 2.5rem;
+		text-align: center;
+		font-size: 14px;
+	}
+}
