@@ -7,6 +7,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: antiquewhite;
+	gap: 2rem;
 }
 
 .display {
@@ -30,6 +31,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 2rem;
+	border: 6px double black;
 }
 
 .row {
@@ -55,7 +57,7 @@ button.double {
 }
 
 button[data-number] {
-	background-color: rgb(150, 150, 150);
+	background: linear-gradient(to bottom, rgb(211, 210, 209) 0%, rgb(150, 150, 150) 100%);
 	box-shadow: 8px 8px 0 rgb(255, 163, 77);
 }
 
@@ -66,7 +68,7 @@ button[data-number]:active {
 
 button[data-operator],
 button[data-other] {
-	background-color: rgb(240, 116, 0);
+	background: linear-gradient(to top, rgb(255, 163, 77) 0%, rgb(240, 116, 0) 100%);
 	box-shadow: 8px 8px 0 rgb(199, 199, 199);
 }
 
@@ -117,6 +119,9 @@ button[data-other]:active {
 	}
 }
 @media (max-width: 395px) {
+	.display {
+		font-size: 2rem;
+	}
 	.numpad {
 		width: 80vw;
 		height: 50vh;
@@ -131,16 +136,25 @@ button[data-other]:active {
 		margin: 0;
 	}
 	button {
-		width: fit-content;
-		height: 2.5rem;
+		width: 5rem;
+		height: 5rem;
 		text-align: center;
 		font-size: 14px;
 		box-shadow: none;
 		flex: 1;
+		border: 1px solid black;
+		box-shadow: inset 0 0 15px #2c3e50;
 	}
+
 	button[data-operator],
 	button[data-other],
 	button[data-number] {
+		box-shadow: none;
+	}
+
+	button[data-number]:active,
+	button[data-operator]:active,
+	button[data-other]:active {
 		box-shadow: none;
 	}
 }
