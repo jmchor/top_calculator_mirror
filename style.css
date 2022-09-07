@@ -74,13 +74,6 @@ button[data-other] {
 }
 
 @media (max-width: 1500px) {
-	.display {
-		width: auto;
-		height: 10vh;
-		margin: 1rem 1rem 0 1rem;
-		padding: 1rem 1rem 1rem 1rem;
-		font-size: 2rem;
-	}
 	.numpad {
 		width: auto;
 		height: 50vh;
@@ -102,18 +95,11 @@ button[data-other] {
 }
 @media (max-width: 768px) {
 	.outerBorder {
-		border: 2px solid black;
 		height: 75vh;
 		width: 35vw;
 		gap: 1rem;
 	}
-	.display {
-		width: auto;
-		height: 10vh;
-		margin: 1rem 1rem 0 1rem;
-		padding: 1rem 1rem 1rem 1rem;
-		font-size: 2rem;
-	}
+
 	.numpad {
 		width: auto;
 		height: 50vh;
@@ -135,18 +121,11 @@ button[data-other] {
 }
 @media (max-width: 375px) {
 	.outerBorder {
-		border: 2px solid black;
 		height: 70vh;
 		width: 70vw;
 		gap: 1rem;
 	}
-	.display {
-		width: auto;
-		height: 10vh;
-		margin: 1rem 1rem 0 1rem;
-		padding: 1rem 1rem 1rem 1rem;
-		font-size: 2rem;
-	}
+
 	.numpad {
 		width: auto;
 		height: 50vh;
